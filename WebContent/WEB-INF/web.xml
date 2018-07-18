@@ -33,20 +33,20 @@
 	<!-- DispatcherServlet会把请求分发给各个处理器，并支持可配置的处理器映射、视图渲染、本地化、时区与主题渲染等，甚至还能支持文件上传。
 	处理器是你的应用中注解了 @Controller和 @RequestMapping的类和方法，Spring为处理器方法提供了极其多样灵活的配置。 -->
 	<servlet>
-		<servlet-name>springDispatcherServlet</servlet-name>
+		<servlet-name>springmvcdemo</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
 		<!-- 配置DispatcherServlet的一个初始化参数，配置SpringMvc配置文件的位置和名称 -->
-		<init-param>
+		<!-- <init-param>
 			<param-name>contextConfigLocation</param-name>
 			<param-value>classpath:springmvc.xml</param-value>
-		</init-param>
+		</init-param> -->
 		<!-- 设置servlet的初始化时间，1为在文件加载时就初始化servlet而不是在第一次访问的时候再加载 -->
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 
 	<!-- Map all requests to the DispatcherServlet for handling -->
 	<servlet-mapping>
-		<servlet-name>springDispatcherServlet</servlet-name>
+		<servlet-name>springmvcdemo</servlet-name>
 		<!--1、精确匹配 2、扩展名匹配  3、路径匹配 -->
 		<!-- /与/* 一样 -->
 		<!-- 设置/为处理所有的请求 -->
